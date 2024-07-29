@@ -36,7 +36,12 @@ public class Node {
                     node.depot = depot;
                     if(node.routes.size()==numVertex){
                         node.routes.add(depot);
-                        System.out.println(node.routes);
+                        //System.out.println(node.routes);
+                        System.out.print(node.routes.get(0));
+                        for (int j = 1; j < node.routes.size(); j++) {
+                            System.out.print(" - "+node.routes.get(j));
+                        }
+                        System.out.println();
                     }else{
                         node.expand();
                     }                    
